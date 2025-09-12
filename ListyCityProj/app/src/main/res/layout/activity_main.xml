@@ -61,9 +61,9 @@
         <ListView
             android:id="@+id/city_list"
             android:layout_width="match_parent"
-            android:layout_height="450dp"
+            android:layout_height="600dp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginBottom="20dp"
             android:paddingBottom="0dp">
 
         </ListView>
