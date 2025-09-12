@@ -22,6 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingStart="30dp"
+            android:paddingTop="40dp"
             android:text="ListyCity"
             android:textSize="34sp"
             android:textStyle="bold" />
@@ -31,14 +32,17 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
+            <!-- Spacer view to push the next button -->
             <Button
                 android:id="@+id/addcity"
-                android:layout_width="112dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:insetLeft="30dp"
+                android:insetTop="20dp"
                 android:onClick="enableInput"
+                android:paddingLeft="24dp"
                 android:text="Add City" />
 
-            <!-- Spacer view to push the next button -->
             <View
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -49,6 +53,7 @@
                 android:id="@+id/deleteCity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:insetRight="30dp"
                 android:onClick="deleteCity"
                 android:text="Delete City" />
         </LinearLayout>
@@ -56,15 +61,16 @@
         <ListView
             android:id="@+id/city_list"
             android:layout_width="match_parent"
-            android:layout_height="493dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="20dp">
+            android:layout_height="450dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="50dp"
+            android:paddingBottom="0dp">
 
         </ListView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <EditText
@@ -72,8 +78,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:ems="10"
+                android:enabled="true"
                 android:hint="Enter city name here"
-                android:inputType="text" />
+                android:inputType="text"
+                android:visibility="invisible" />
 
             <Button
                 android:id="@+id/addToCityList"
@@ -81,10 +89,12 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="addCity"
-                android:text="Enter" />
+                android:text="Enter"
+                android:visibility="invisible" />
+
         </LinearLayout>
 
-    </LinearLayout>
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
